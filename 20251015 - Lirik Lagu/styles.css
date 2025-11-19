@@ -1,0 +1,42 @@
+* {
+    font-family: 'Roboto';
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+ul > li {
+    list-style-type: none;
+}
+
+body {
+    display: flex;
+    background-color: #010101;
+    color: #ffffff;
+    margin: 50px 0px;
+}
+
+.container {
+    padding: 0px 20px;
+}
+
+section {
+    padding: 0px;
+    margin: 0px;
+}
+
+.container#sidebar {
+    margin: 10px 5px 0px 10px;
+    width: 25vw;
+    background-color: #121212;
+    border-radius: 10px;
+}
+
+.container#lyrics {
+    margin: 10px 10px 0px 5px;
+    width: 75vw;
+    background-color: #212121;
+    border-radius: 10px;
+}
