@@ -1,0 +1,137 @@
+:root {
+    --fontColor1: #000000;
+    --fontColor2: #696969;
+    --bgColor1: #e0e0e0;
+    --bgColor2: #ffffff;
+    --bgColor3: #dbdbdb;
+    --bgColor4: #596064;
+    --fgColor1: #357EC7;
+    --borderColor1: #d3d3d3b3;
+    --borderColor2: #0000003f;
+
+    --navbar-spacing: 60px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: "Segoe UI";
+    background-color: var(--bgColor1);
+}
+
+/* Class Presets */
+
+.full-width {
+    width: 100vw;
+}
+
+.fixed {
+    position: fixed;
+}
+
+/* Custom classes */
+
+.navbar {
+    display: flex;
+    background-color: var(--bgColor1);
+    color: var(--fontColor1);
+    height: 40px;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 2px solid var(--borderColor1);
+}
+
+.navbar > img#logo {
+    position: relative;
+    left: -30px;
+    width: 200px;
+    height: auto;
+}
+
+.navbar-content {
+    position: fixed;
+    top: 20px;
+    right: 15px;
+}
+
+.navbar-content > li {
+    display: inline-block;
+    text-align: center;
+    margin: 0px 5px;
+    padding: 5px;
+}
+
+.navbar-content > li#sana_lu_gak_diajak {
+    position: fixed;
+    top: 2.5px;
+    left: 0px;
+    background-color: transparent;
+    width: 97.25vw;
+    height: 50px;
+}
+
+.navbar-content > li#sana_lu_gak_diajak > input[type="text"] {
+    background-color: var(--bgColor3);
+    margin-top: 10px;
+    width: 400px;
+    height: 31px;
+    padding: 2px 2px 2px 35px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid var(--borderColor2);
+    color: var(--fontColor2);
+}
+
+.navbar-content > li#sana_lu_gak_diajak:hover {
+    text-decoration: none;
+}
+
+.navbar-content > li#sana_lu_gak_diajak > input[type="text"]:focus {
+    border-bottom: 2px solid var(--fgColor1);
+    transition: ease-out 0.1s;
+}
+
+.navbar-content > li#sana_lu_gak_diajak > i#icon {
+    position: relative;
+    right: 431.5px;
+    top: 3px;
+    color: var(--borderColor2);
+}
+
+.navbar-content > li > a:hover {
+    text-decoration: underline;
+    transition: ease-in-out 0.3s;
+}
+
+.navbar-content > li > a {
+    color: var(--fontColor1);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar-content > li > i {
+    position: relative;
+    top: 1.5px;
+    right: 2px;
+}
+
+.main-content {
+    background-color: var(--bgColor2);
+    color: var(--fontColor1);
+    height: 800px;
+    padding: calc(10px + var(--navbar-spacing)) 10px 10px 10px;
+}
+
+.main-content > p {
+    background-color: var(--bgColor2);
+}
+
+.footer {
+    display: flex;
+    background-color: var(--bgColor4);
+    color: white;
+    height: 200px;
+    padding: 15px;
+    border-top: 2px solid var(--borderColor2);
+}
