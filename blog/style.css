@@ -1,0 +1,371 @@
+:root {
+    --fontColor1: #000000;
+    --fontColor2: #696969;
+    --bgColor1: #e0e0e0;
+    --bgColor2: #ffffff;
+    --bgColor3: #dbdbdb;
+    --bgColor4: #596064;
+    --fgColor1: #357EC7;
+    --borderColor1: #d3d3d3b3;
+    --borderColor2: #0000003f;
+    --no-color: #00000000;
+    --navbar-spacing: 60px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI";
+}
+
+h1, h2, h3, h4, h5, h6, p, span, i, b, table {
+    background-color: var(--no-color);
+    font-family: 'Poppins';
+}
+
+body {
+    overflow-x: hidden;
+}
+
+html {
+    scroll-padding-top: var(--navbar-spacing);
+    scroll-behavior: smooth;
+    transition: ease-in-out 0,5s;
+}
+
+.full-width {
+    width: 100vw;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.navbar {
+    display: flex;
+    background-color: var(--bgColor1);
+    color: var(--fontColor1);
+    height: 40px;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 2px solid var(--borderColor1);
+    z-index: 999;
+    
+    & img#logo {
+        position: relative;
+        left: -30px;
+        width: 200px;
+        height: auto;
+    }
+}
+
+.navbar-content {
+    position: fixed;
+    top: 20px;
+    right: 15px;
+    z-index: 99999;
+
+    & li {
+        display: inline-block;
+        text-align: center;
+        margin: 0px 5px;
+        padding: 5px;
+
+        & a {
+            color: var(--fontColor1);
+            text-decoration: none;
+            font-size: 16px;
+
+            & :hover {
+                text-decoration: underline;
+                transition: ease-in-out 0.3s;
+            }
+        }
+
+        & i {
+            position: relative;
+            top: 1.5px;
+            right: 2px;
+        }
+    }
+
+    & li#searchbox {
+        text-align: right;
+        position: fixed;
+        top: 2.5px;
+        left: 0px;
+        background-color: transparent;
+        width: 64.25vw;
+        height: 50px;
+
+        & input[type="text"] {
+            background-color: var(--bgColor3);
+            margin-top: 10px;
+            width: 400px;
+            height: 31px;
+            padding: 2px 2px 2px 35px;
+            border-radius: 50px;
+            outline: none;
+            border: 1px solid var(--borderColor2);
+            color: var(--fontColor2);
+            z-index: 999;
+
+            & :focus {
+                    border-bottom: 2px solid var(--fgColor1);
+                    transition: ease-out 0.1s;
+                }
+            }
+        }
+
+    & :hover {
+        text-decoration: none;
+    }
+
+    & i#icon {
+        position: relative;
+        right: 431.5px;
+        top: 1px;
+        color: var(--borderColor2);
+        z-index: 999;
+    }
+}
+
+.footer {
+    display: flex;
+    position: relative;
+    bottom: -450px;
+    background-color: #232323;
+    color: white;
+    height: 30px;
+    padding: 10px;
+    border-top: 2px solid black;
+
+    & p {
+        width: 97.5vw;
+        text-align: center;
+    }
+}
+
+.main-content {
+    background-image: radial-gradient(circle at top left, var(--no-color), #000000b0), url(./images/img1.jpg);
+    background-repeat: no-repeat;
+    background-size: 106vw auto;
+    width: 100vw;
+    height: 510px;
+    padding: 200px 100px 20px 80px;
+    z-index: 999999 ;
+    & h1, h3 {
+        font-family: 'Poppins';
+        color: #000000;
+        margin-bottom: 10px;
+    }
+
+    & h1#greet-heading {
+        font-size: 72px;
+    }
+
+    & h3#greet-subheading {
+        font-size: 36px;
+    }
+
+    & h3#download-desc {
+        font-weight: 100;
+        background-color: var(--no-color);
+    }
+
+    & form {
+        margin: 0;
+        padding: 0;
+        background-color: --var(--no-color);
+        & button#download {
+            background-color: white;
+            width: 200px;
+            height: 40px;
+            font-family: 'Poppins';
+            margin-top: 10px;
+            font-size: 18px;
+            color: #000000;
+            border: 2px solid #000000;
+        }
+    }
+}
+
+.profile {
+    height: 400px;
+    background-color: #ffe3c9;
+    border-bottom: 5px solid black;
+    
+    & ul {
+        position: absolute;
+        bottom: -330px;
+        left: 350px;
+        color: black;
+
+        & h3 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        & p, li, i {
+            font-size: 20px;
+            list-style-type: none;
+        }
+
+        & a {
+            text-decoration: none;
+            font-weight: bold;
+            color: black;
+        }
+    }
+
+    & img#profileImg {
+        width: auto;
+        height: 300px;
+        margin: 50px 0px 0px 50px;
+        border: 3px solid black;
+    }
+}
+
+.description {
+    height: 450px;
+    background-image: linear-gradient(180deg, #ffda89ae, #fff0ce);
+    padding: 20px;
+
+    & div#frame {
+        position: relative;
+        left: 50px;
+        top: 20px;
+        background-color: white;
+        padding: 20px 20px 40px 20px;
+        width: 357px;
+        border: 2px solid black;
+        rotate: -4deg;
+    }
+
+    & h1#product-name {
+        position: relative;
+        bottom: 450px;
+        left: 500px;
+        font-size: 50px;
+    }
+
+    & p#text {
+        position: relative;
+        font-family: 'Poppins';
+        bottom: 420px;
+        left: 500px;
+        font-size: 18px;
+        width: 900px;
+        text-align: justify;
+    }
+
+    & div#frame > img#product-image {
+        width: auto;
+        height: 400px;
+        border: 2px solid black;
+    }
+}
+
+table.utilities {
+    border-collapse: collapse;
+    margin-bottom: 30px;
+
+    & thead > tr:nth-child(1) {
+        border-bottom: 1px solid black;
+    }
+
+    & td, th {
+        padding: 5px;
+        
+        &:first-child { 
+            width: 350px; 
+            text-align: left; 
+            border-right: 1px solid black;
+        }
+        &:last-child { 
+            width: 100px; 
+            text-align: center
+        }
+    }
+}
+
+.procedure {
+    padding: 90px 30px 0px 30px;
+    font-size: 18px;
+    background-image: linear-gradient(180deg, #fff0ce, #ffffff);
+    
+    & h1#heading  {
+        font-size: 50px;
+        padding-bottom: 10px;
+    }
+
+    & nav#tabs {
+        position: relative;
+        width: 102vw;
+        background-color: white;
+        right: 30px;
+        padding-left: 100px;    
+        padding: 20px;
+
+        & a {
+            width: 800px;
+            padding: 10px 50px;
+            margin: 0px;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+            transition: 0.5s ease-in-out;
+            border-radius: 10px;
+
+            &:hover {
+                color: #706633;
+            }
+        }
+    }
+}
+
+.procedure-text {
+    position: absolute;
+    top: 1900px;
+    background-color: #ffffff7e;
+    padding: 20px;
+    width: 92.5vw;
+    border-radius: 10px;
+}
+
+.procedure-text-p {
+    margin-left: 25px;
+    
+    & li > a {
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    & h3.subheading {
+        font-size: 36px;
+    }
+}
+
+a.toggled {
+    background-color: #fff893ab;
+    border-radius: 10px;
+    color: black;
+
+    & :hover {
+        color: black;
+    }
+}
+
+img.frame2 {
+    position: relative;
+    left: 850px;
+    bottom: 100px;
+    rotate: 3deg;
+    background-color: white;
+    border: 2px solid black;
+    padding: 15px;
+    width: 550px;
+    height: auto;
+    z-index: 1;
+}
