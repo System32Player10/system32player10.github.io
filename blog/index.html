@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header class="navbar full-width fixed">
+        <img id="logo" src="images/img0.jpg">
+        <ul class="navbar-content">
+            <li><i class="fa fa-home"></i> <a href="#sec0">Home</a></li>
+            <li><i class="fa fa-user"></i> <a href="#sec1">Profile</a></li>
+            <li><i class="fa fa-exclamation-circle"></i> <a href="#sec2">About</a></li>
+            <li><i class="fa fa-tasks"></i> <a href="#sec3">Procedure</a></li>
+            <li id="searchbox">
+                <input type="text" placeholder="Search">
+                <i class="fas fa-search icon" id="icon"></i>
+            </li>
+        </ul>
+    </header>
+    <section class="main-content full-width navbar-spaced" id="sec0">
+        <h1 id="greet-heading">Welcome</h1>
+        <h3 id="greet-subheading">Yoghurt Biotechnology</h3>
+        <h3 id="download-desc">Ingin melihat versi karya tulis ilmiah? Klik tombol "Download PDF" untuk mengunduh file KTI.<br><span>File name: "KTI PDF.pdf" (917kb)</span></h3>
+        <form action="KTI PDF.pdf"><button type="submit" id="download">Download PDF</button></form>
+    </section>
+    <section class="profile full-width navbar-spaced" id="sec1">
+        <img src="images/img6.jpg" id="profileImg">
+        <ul>
+            <li><h3>Identitas Penulis</h3></li>
+            <li><p>Jason Lie - 9B/12 - Kampus Santa Angela Bandung<br></p></li>
+            <li><h3>Platform Media Sosial</h3></li><br>
+            <li><a href="https://www.instagram.com/jason.lie_32/"><i class="fa-brands fa-instagram"></i> @jason.lie_32</a></li>
+            <li><a href="#"><i class="fa-brands fa-whatsapp"></i> +62 821-2867-6880</a></li>
+            <li><a href="https://portal.santa-angela.sch.id"><i class="fa fa-globe"></i> +62 821-2867-6880</a></li>
+        </ul>
+    </section>
+    <section class="description full-width navbar-spaced" id="sec2">
+        <div id="frame">
+            <img src="./images/img2.jpg" id="product-image">
+        </div>
+        <h1 id="product-name">Yogurt</h1>
+        <p id="text">
+            Salah satu produk olahan susu bertekstur kental dan memiliki cita rasa khas asam dikenal sebagai yogurt. Yogurt umumnya dibuat menggunakan susu hewani, seperti susu sapi dan kambing yang kemudian difermentasi menggunakan bakteri asam laktat <i>Lactobacillus bulgaricus</i> & <i>Streptococcus thermophilus</i>. Yogurt kaya akan kandungan nutrisi seperti protein, vitamin, mineral, serta kalsium yang tinggi. Produk olahan susu ini memiliki berbagai manfaat kesehatan, yaitu untuk meningkatkan kesehatan jantung, pencernaan, dan imunitas sehingga mampu mengurangi risiko penyakit kronis dalam tubuh. <br><br>Terdapat berbagai parameter yang dapat diteliti pada yogurt seperti <i>Potential of Hydrogen</i> (pH), viskositas, kadar asam laktat, dan lain sebagainya. Pada halaman blog ini, penulis berfokus pada parameter pH dan viskositas.
+        </p>
+    </section>
+    <section class="procedure full-width" id="sec3">
+        <h1 id="heading">Prosedur</h1>
+        <nav id="tabs">
+            <a href="#" id="btn0" class="toggled">Pembuatan Yogurt</a>
+            <a href="#" id="btn1">Pengukuran pH</a>
+            <a href="#" id="btn2">Pengukuran Viskositas</a>
+        </nav>
+        <img src="images/img4.jpg" class="frame2" id="changable1">
+        <img src="images/img3.jpg" class="frame2" id="changable2" hidden>
+        <img src="images/img5.jpg" class="frame2" id="changable3" hidden>
+        <div class="procedure-text" id="0">
+            <h3 class="subheading">Alat & Bahan:</h3>
+            <table class="utilities">
+                <thead>
+                    <tr class="divider"><th>Alat/Bahan</th><th>Jumlah</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Panci stainless</td><td>1 buah</td></tr>
+                    <tr><td>Mangkok kecil</td><td>1 buah</td></tr>
+                    <tr><td>Centong</td><td>1 buah</td></tr>
+                    <tr><td>Sendok makan</td><td>1 buah</td></tr>
+                    <tr><td>Toples kaca (200 mL)</td><td>4 buah</td></tr>
+                    <tr><td>Kain tebal</td><td>1 buah</td></tr>
+                    <tr><td>Box styrofoam</td><td>1 buah</td></tr>
+                    <tr><td>Termometer alkohol (150<sup>o</sup>C)</td><td>1 buah</td></tr>
+                    <tr><td><i>Greenfield</i> Greek Yoghurt</td><td>80 gr</td></tr>
+                    <tr><td><i>Greenfield</i> Susu UHT</td><td>950 mL</td></tr>
+                </tbody>
+            </table>
+            <h3 class="subheading">Prosedur</h3>
+            <ol class="procedure-text-p" type="1">
+                <li>Siapkan alat dan bahan pembuatan yogurt.</li>
+                <li>Tuangkan susu UHT pada panci, kemudian letakkan di atas kompor.</li>
+                <li>Nyalakan kompor dengan api sedang, kemudian aduk susu perlahan hingga mencapai suhu 80°C (diukur menggunakan termometer alkohol).</li>
+                <li>Matikan kompor dan diamkan suhu susu hingga suhunya menurun menjadi 40-45°C.</li>
+                <li>Tuangkan starter (greek yoghurt) pada mangkok, campurkan dengan 1-2 sdm susu hangat, dan aduk hingga encer.</li>
+                <li>Campurkan starter yang sudah encer dengan sisa susu dalam panci, kemudian aduk hingga tercampur rata.</li>
+                <li>Tuangkan campuran yogurt pada toples kaca atau kedap udara, kemudian tutup dengan rapat.</li>
+                <li>Simpan toples pada kotak styrofoam untuk proses fermentasi selama 12-48 jam.</li>
+                <li>Setelah proses fermentasi selesai, keluarkan toples dan segera masukkan ke lemari es untuk mencegah kerusakan yogurt oleh kapang/khamir.</li>
+                <li>Amati <a href="#btn1" id="btn3">pH</a> dan <a href="#btn2" id="btn4">viskositas</a> yogurt menggunakan sampel tersebut menggunakan kertas pH; gelas ukur dan corong;</li>
+            </ol>
+        </div>
+        <div class="procedure-text" id="1" hidden>
+            <h3 class="subheading">Alat & Bahan:</h3>
+            <table class="utilities">
+                <thead>
+                    <tr class="divider"><th>Alat/Bahan</th><th>Jumlah</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Indikator pH Universal</td><td>1 set</td></tr>
+                    <tr><td>Sendok teh</td><td>1 buah</td></tr>
+                    <tr><td>Sampel yogurt</td><td>1 sdt</td></tr>
+                </tbody>
+            </table>
+            <h3 class="subheading">Prosedur</h3>
+            <ol class="procedure-text-p" type="1">
+                <li>Ambil satu sendok makan yogurt, kemudian celupkan setengah kertas pH pada yogurt.</li>
+                <li>Bandingkan warna pada kertas dengan indikator yang tersedia dan catat hasil pengamatan.</li>
+            </ol>
+            <div class="indikator-pH">
+
+            </div>
+        </div>
+        <div class="procedure-text" id="2" hidden>
+            <h3 class="subheading">Alat & Bahan:</h3>
+            <table class="utilities">
+                <thead>
+                    <tr class="divider"><th>Alat/Bahan</th><th>Jumlah</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Gelas ukur 100 mL</td><td>1 buah</td></tr>
+                    <tr><td>Corong plastik (diameter lubang 1,2 cm)</td><td>1 buah</td></tr>
+                    <tr><td>Gelas plastik</td><td>2 buah</td></tr>
+                    <tr><td>Stopwatch HP</td><td>1 buah</td></tr>
+                    <tr><td>Timbangan digital (resolusi 1,0 unit)</td><td>1 buah</td></tr>
+                    <tr><td>Sampel yogurt</td><td>1 toples</td></tr>
+                </tbody>
+            </table>
+            <h3 class="subheading">Prosedur</h3>
+            <ol class="procedure-text-p" type="1">
+                <li>Siapkan gelas ukur dan timbangan. Nyalakan timbangan, letakkan gelas ukur, dan tekan tombol “Tare” untuk menyetel ulang timbangan ke 0 g.</li>
+                <li>Tuangkan sampel yogurt sebanyak 25 mL pada gelas ukur. Amati massa pada timbangan digital dan catat hasil pengamatan untuk menentukan massa jenis yogurt.</li>
+                <li>Siapkan satu buah gelas plastik, dan letakkan corong di atas gelas.</li>
+                <li>Siapkan stopwatch HP dan sampel 25 mL pada gelas ukur yang sama. Kemudian secara bersamaan, tuangkan sampel pada ujung corong dan mulai stopwatch.</li>
+                <li>Amati aliran yogurt hingga teralir pada gelas. Setelah itu, hentikan stopwatch, dan catat hasil waktu alir.</li>
+                <li>Tuangkan sampel yang tertampung pada gelas ke gelas plastik lainnya, catat dan ulangi pengujian sebanyak 10 kali.</li>
+                <li>Hitung viskositas berdasarkan hasil pengamatan menggunakan metode perbandingan.</li>
+            </ol>
+        </div>
+    </section>
+    <footer class="footer full-width">
+        <p>Kampus Santa Angela Bandung © 2026</p>
+    </footer>
+</body>
+</html>
