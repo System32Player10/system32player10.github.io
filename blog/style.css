@@ -177,6 +177,7 @@ html {
         margin: 0;
         padding: 0;
         background-color: --var(--no-color);
+        
         & button#download {
             background-color: white;
             width: 200px;
@@ -187,6 +188,7 @@ html {
             color: #000000;
             border: 2px solid #000000;
         }
+
         & :hover {
             cursor: pointer;
         }
@@ -221,7 +223,7 @@ html {
         }
     }
 
-    & img#profileImg {
+    & img#profileImg { 
         width: auto;
         height: 300px;
         margin: 50px 0px 0px 50px;
@@ -371,5 +373,55 @@ img.frame2 {
     width: 550px;
     height: auto;
     z-index: 1;
+}
 
+.indikator-pH {
+    margin-top: 100px;
+
+    & div#indikator-pH {
+        margin-top: 20px;
+        width: 90vw;
+        height: 100px;
+        border: 3px solid black;
+        background-image: linear-gradient(90deg, #ff0805, #ff8c41, #f3d863, #9fd253, #6aac76, #367cae, #633da4);
+    }
+
+    & nav {
+        width: 100%;
+        padding-top: 10px;
+        & span {
+            margin: calc(37vw / 14);
+            font-family: 'Cambria Math';
+            font-style: italic;
+            font-size: 24px;
+        }
+    }
+}
+
+.indicators {
+    width: 90vw;
+    height: 10px;
+
+    & div {
+        & div.vertical-line {
+            border: 1px solid black;
+            width: 0px;
+        }
+        & span {
+            width: auto;
+        }
+    }
+
+    & [line-id] {
+        position: relative;
+        top: 0px;
+        
+        & span { position: relative; }
+    }
+
+    & [line-id="1"] {
+        left: 380px;
+        & span {right: calc(30px); }
+        & .vertical-line { height: 50px; }
+    }
 }
