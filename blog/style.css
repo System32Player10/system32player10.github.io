@@ -30,7 +30,7 @@ body {
 html {
     scroll-padding-top: var(--navbar-spacing);
     scroll-behavior: smooth;
-    transition: ease-in-out 0,5s;
+    transition: ease-in-out 0.5s;
 }
 
 .full-width {
@@ -56,6 +56,7 @@ html {
         left: -30px;
         width: 200px;
         height: auto;
+        z-index: 100000;
     }
 }
 
@@ -75,17 +76,17 @@ html {
             color: var(--fontColor1);
             text-decoration: none;
             font-size: 16px;
-
-            & :hover {
-                text-decoration: underline;
-                transition: ease-in-out 0.3s;
-            }
         }
 
         & i {
             position: relative;
             top: 1.5px;
             right: 2px;
+        }
+
+        & a:hover, i:hover {
+            color: #0000009a;
+            transition: ease-in-out 0.3s;
         }
     }
 
@@ -110,14 +111,14 @@ html {
             color: var(--fontColor2);
             z-index: 999;
 
-            & :focus {
-                    border-bottom: 2px solid var(--fgColor1);
-                    transition: ease-out 0.1s;
-                }
+            &:focus {
+                border-bottom: 2px solid var(--fgColor1);
+                transition: ease-out 0.1s;
             }
         }
+    }
 
-    & :hover {
+    &:hover {
         text-decoration: none;
     }
 
@@ -133,7 +134,7 @@ html {
 .footer {
     display: flex;
     position: relative;
-    bottom: -450px;
+    bottom: -75vh;
     background-color: #232323;
     color: white;
     height: 30px;
@@ -398,30 +399,89 @@ img.frame2 {
     }
 }
 
-.indicators {
-    width: 90vw;
-    height: 10px;
+nav.classes {
+    & span { position: relative; }
+    & span#asam { left: -1vw; }
+    & span#netral { left: 27vw; }
+    & span#basa { left: 64.5vw; }
+}
 
-    & div {
+.indicators {
+    display: flex;
+    list-style-type: none;
+    
+    & li {
         & div.vertical-line {
             border: 1px solid black;
             width: 0px;
         }
-        & span {
-            width: auto;
-        }
+        & span { width: auto; }
     }
 
     & [line-id] {
         position: relative;
         top: 0px;
+        text-align: center;
         
         & span { position: relative; }
+        & .vertical-line { height: 50px; }
     }
 
-    & [line-id="1"] {
-        left: 380px;
-        & span {right: calc(30px); }
-        & .vertical-line { height: 50px; }
+    & [line-id="1"] { left: 24.75vw; } 
+    & [line-id="2"] { left: 30vw; }
+    & [line-id="3"] { left: 30.5vw; }
+
+    & [line-id="1"] > span, [line-id="3"] > span { right: 30px; }
+    & [line-id="2"] > span { right: 42.5px; }
+}
+
+.formula-list {
+    display: flex;
+    list-style-type: none;
+
+    & li {
+        width: calc(92vw / 2);
+        display: grid;
+        place-items: center;
+        margin-top: 30px;
+
+        & span {
+            font-size: 36px;
+            font-family: 'Cambria Math';
+            
+            & span.stacked-fraction{
+                display: inline-grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto;
+                text-align: center;
+                vertical-align: middle;
+                font-family: 'Cambria Math';
+
+                & span {
+                    padding: 0 0.2em;
+                    font-family: 'Cambria Math';
+                }
+
+                & #numerator { border-bottom: 1px solid black; }
+            }
+        }
+
+        & sub, sup { font-size: 18px; }
+
+        & ul {
+            margin-top: 30px;
+            width: 100%;
+
+            & li {
+                margin: 2px;
+
+                & p {
+                    font-size: 18px;
+                    margin: 2px;
+
+                    & sub, sup { font-size: 10px; }
+                }
+            }
+        }
     }
 }
