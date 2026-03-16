@@ -11,7 +11,7 @@
 </head>
 <body>
     <header class="navbar full-width fixed">
-        <a href="#sec0"><img id="logo" src="images/img0.jpg"></a>
+        <a href="#sec0"><img id="logo" src="images/img0.jpg" alt="Logo"></a>
         <ul class="navbar-content">
             <li><i class="fa fa-home"></i> <a href="#sec0">Home</a></li>
             <li><i class="fa fa-user"></i> <a href="#sec1">Profile</a></li>
@@ -30,19 +30,19 @@
         <form action="https://system32player10.github.io/12_Jason%20Lie_9B_KTI%20FINAL.pdf"><button type="submit" id="download">Download PDF</button></form>
     </section>
     <section class="profile full-width navbar-spaced" id="sec1">
-        <img src="images/img6.jpg" id="profileImg">
+        <img src="images/img6.jpg" id="profileImg" alt="Foto Penulis">
         <ul>
             <li><h3>Identitas Penulis</h3></li>
             <li><p>Jason Lie - 9B/12 - Kampus Santa Angela Bandung<br></p></li>
             <li><h3>Platform Media Sosial</h3></li><br>
             <li><a href="https://www.instagram.com/jason.lie_32/"><i class="fa-brands fa-instagram"></i> @jason.lie_32</a></li>
-            <li><a href="#"><i class="fa-brands fa-whatsapp"></i> +62 821-2867-6880</a></li>
+            <li><a href="https://web.whatsapp.com"><i class="fa-brands fa-whatsapp"></i> +62 821-2867-6880</a></li>
             <li><a href="https://system32player10.github.io"><i class="fa fa-globe"></i> System32Player10</a></li>
         </ul>
     </section>
     <section class="description full-width navbar-spaced" id="sec2">
         <div id="frame">
-            <img src="./images/img2.jpg" id="product-image">
+            <img src="./images/img2.jpg" id="product-image" alt="Yogurt">
         </div>
         <h1 id="product-name">Yogurt</h1>
         <p id="text">
@@ -56,9 +56,9 @@
             <a href="#" id="btn1">Pengukuran pH</a>
             <a href="#" id="btn2">Pengukuran Viskositas</a>
         </nav>
-        <img src="images/img4.jpg" class="frame2" id="changable1">
-        <img src="images/img3.jpg" class="frame2" id="changable2" hidden>
-        <img src="images/img5.jpg" class="frame2" id="changable3" hidden>
+        <img src="images/img4.jpg" class="frame2" id="changable1" alt="img4.jpg">
+        <img src="images/img3.jpg" class="frame2" id="changable2" alt="img3.jpg" hidden>
+        <img src="images/img5.jpg" class="frame2" id="changable3" alt="img5.jpg" hidden>
         <div class="procedure-text" id="0">
             <h3 class="subheading">Alat & Bahan:</h3>
             <table class="utilities">
@@ -112,16 +112,27 @@
             </ol>
             <div class="indikator-pH">
                 <h3>Indikator pH Universal</h3>
+                <nav class="classes">
+                    <span id="asam">Asam</span><span id="netral">Netral</span><span id="basa">Basa</span>
+                </nav>
                 <div id="indikator-pH"></div>
                 <nav>
                     <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span>
                 </nav>
-                <div class="indicators">
-                    <div line-id="1">
+                <ul class="indicators">
+                    <li line-id="1">
                         <div class="vertical-line"></div>
                         <span>Yogurt</span>
-                    </div>
-                </div>
+                    </li>
+                    <li line-id="2">
+                        <div class="vertical-line"></div>
+                        <span>Susu Sapi<br>UHT</span>
+                    </li>
+                    <li line-id="3">
+                        <div class="vertical-line"></div>
+                        <span>Air 25<sup>o</sup>C</span>
+                    </li>
+                </ul>
             </div>
         </div>
         <div class="procedure-text" id="2" hidden>
@@ -149,6 +160,39 @@
                 <li>Tuangkan sampel yang tertampung pada gelas ke gelas plastik lainnya, catat dan ulangi pengujian sebanyak 10 kali.</li>
                 <li>Hitung viskositas berdasarkan hasil pengamatan menggunakan metode perbandingan.</li>
             </ol>
+            <ul class="formula-list">
+                <li id="density">
+                    <h3>Rumus Massa Jenis (Densitas)</h3>
+                    <span>&rho; = 
+                        <span class="stacked-fraction">
+                            <span id="numerator">m</span>
+                            <span id="denominator">V</span>
+                        </span>
+                    </span>
+                    <ul>
+                        <li><p>&rho; = Massa jenis fluida (g/mL)</p></li>
+                        <li><p>m = Massa fluida (gram / g)</p></li>
+                        <li><p>V = Volume fluida (mililiter / mL)</p></li>
+                    </ul>
+                </li>
+                <li id="viscosity">
+                    <h3>Rumus Viskositas (Metode Perbandingan)</h3>
+                    <span>&mu; = 
+                        <span class="stacked-fraction">
+                            <span id="numerator">t &times; &rho;</span>
+                            <span id="denominator">t<sub>0</sub> &times; &rho;<sub>0</sub></span>
+                        </span>
+                        &times; &mu;<sub>0</sub>
+                    </span>
+                    <ul>
+                        <li><p>&mu; = Viskositas fluida (centipoise / cP)</p></li>
+                        <li><p>&mu;<sub>0</sub> = Viskositas air 26<sup>o</sup>C (0,890 cP)</p></li>
+                        <li><p>t & t<sub>0</sub> = Waktu alir fluida (sekon / s)</p></li>
+                        <li><p>&rho; = Massa jenis fluida (g/mL)</p></li>
+                        <li><p>&rho;<sub>0</sub> = Massa jenis air 26<sup>o</sup>C (0,997 g/mL)</p></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </section>
     <footer class="footer full-width">
